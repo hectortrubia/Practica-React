@@ -1,0 +1,32 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+
+}
+
+
+.container{
+    border:1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;    
+    height: 150px;
+   box-shadow: 7px 5px 20px 1px #000000;
+}
+.title{
+    color:grey
+
+
+
+}
+
+.subtitle{
+
+color:grey
+
+}
