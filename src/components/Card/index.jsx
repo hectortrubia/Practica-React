@@ -1,8 +1,13 @@
 import react from 'react'
-import './stylesheet.css'
+import './style.css'
 
 
-function Card(props){
+function Card(props,i){
+//    const handlerdelete = e =>{
+//        props[i].title === title ? props.pop() : ""
+
+//    }
+
 
 
 
@@ -13,9 +18,10 @@ function Card(props){
     return(
         <react.Fragment>
             <div className='container'>
-          <h1 className='title'>{props.title}</h1>
+          <h1 className='title'> titulo tarea{props.title}</h1>
           <div className='circle'></div>
-         <p >🗑️</p>
+         {/* <p onClick={handlerdelete} >🗑️ </p> */}
+          { <p>🗑️ </p> }
            <p className='subtitle'>#created on{props.date}</p>
            </div>
 
