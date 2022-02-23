@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import '../Container/style.css'
+
 import Card from '../Card';
+
+import TextArea from '../textarea';
+
+
 function ContainerTask(prop) {
 
     console.log(prop.name)
@@ -26,7 +31,7 @@ function ContainerTask(prop) {
             </div>
             <div className="ContainerTask">
                 {
-                   newTask ? <div className='task'>nueva caja</div> : <></>
+                   newTask ? <div className='task'><TextArea></TextArea></div> : <></>
                 }
                 {
                     // MAP para las task que se creen, el length de este array sera el mismo que el prop.prop.task.length
