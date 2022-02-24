@@ -31,7 +31,9 @@ function HomePage(){
                     return <ContainerTask key={i} prop={e}></ContainerTask>
                 })
             }
+        
         </div>
+        
     )
 }
 
