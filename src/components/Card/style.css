@@ -7,7 +7,7 @@
 }
 
 
-.container{
+.container-note{
     border:1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -18,24 +18,39 @@
     height: 100px;
    box-shadow: 7px 5px 20px 1px #000000;
 }
-.title{
-    color:grey
+.title-note{
+    color:grey;
+    padding-left: 30px;
 
 
 
 }
 
-.subtitle{
+.subtitle-note{
 
-color:grey
+color:grey;
+padding-left: 20px;
 
 }
 
-.circle{
+.circle-note{
     border-radius: 50%;
     background-color: green;
     width: 10px;
     height: 10px;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
 
     
+
+    
+}
+
+.delete-note{
+    position: relative;
+    left:280px;
+
+
+
 }
