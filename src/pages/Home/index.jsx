@@ -1,50 +1,30 @@
 import React, { useContext } from "react"
 import ContainerTask from "../../components/Container"
 import '../Home/style.css';
+import { DataContext } from "../../components/context/dataContext";
 
 
 
 function HomePage(){
 
-    const arrayProv = [
-       {
-            id: 1,
-            name: 'To do',
-            task: [{
-                title: "Titulo prueba tarea",
-                fecha: "24 feb 2022"
-            },
-            {
-            title: "Titulo prueba tarea",
-            fecha: "25 feb 2022"
-        }
-        ]
-        },
-        {
-            id: 2,
-            name: 'In progress',
-            task: [{
-                title: "Titulo prueba tarea",
-                fecha: "24 feb 2022"
-            }]
-        },
-        {
-            id: 3,
-            name: 'Done',
-            task: [{
-                title: "Titulo prueba tarea",
-                fecha: "24 feb 2022"
-            }]
-        }
-    ]
+    const [dataState, uploadDataState] = useContext(DataContext)
+
+    console.log(dataState)
+
+
+   
 
     return (
         <div className="allContainer">
             {
-                arrayProv.map((e,i) => {
+                dataState.map((e,i) => {
                 
                     return <ContainerTask key={i} prop={e}></ContainerTask>
                 })
+            }
+            {
+                dataState.map(e => {console.log(e)})
+
             }
         
         </div>
