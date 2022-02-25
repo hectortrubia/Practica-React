@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import ContainerTask from "../../components/Container"
-import '../Home/style.css'
+import '../Home/style.css';
+
 
 
 function HomePage(){
@@ -9,17 +10,31 @@ function HomePage(){
        {
             id: 1,
             name: 'To do',
-            task: []
+            task: [{
+                title: "Titulo prueba tarea",
+                fecha: "24 feb 2022"
+            },
+            {
+            title: "Titulo prueba tarea",
+            fecha: "25 feb 2022"
+        }
+        ]
         },
         {
             id: 2,
             name: 'In progress',
-            task: []
+            task: [{
+                title: "Titulo prueba tarea",
+                fecha: "24 feb 2022"
+            }]
         },
         {
             id: 3,
             name: 'Done',
-            task: []
+            task: [{
+                title: "Titulo prueba tarea",
+                fecha: "24 feb 2022"
+            }]
         }
     ]
 
@@ -27,7 +42,7 @@ function HomePage(){
         <div className="allContainer">
             {
                 arrayProv.map((e,i) => {
-                    console.log(e);
+                
                     return <ContainerTask key={i} prop={e}></ContainerTask>
                 })
             }

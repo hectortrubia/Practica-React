@@ -15,7 +15,7 @@ function TextArea() {
         <button className='buttoncancel'>Cancel</button>
 
       </div>
-    </div >
+    </div>
   );
 }
 

@@ -8,7 +8,7 @@ import TextArea from '../textarea';
 
 function ContainerTask(prop) {
 
-    console.log(prop.name)
+  
     const [newTask, uploadNewTask] = useState(false);
 
     const handleNewTask = e => {
@@ -34,9 +34,11 @@ function ContainerTask(prop) {
                    newTask ? <div className='task'><TextArea></TextArea></div> : <></>
                 }
                 {
+                    prop.prop.task.length != 0 ? prop.prop.task.map((e,i)=> <Card key={i} info={e}></Card>   ) : <></>
+                    
                     // MAP para las task que se creen, el length de este array sera el mismo que el prop.prop.task.length
                 }
-<Card></Card>
+     
 
             </div>
         </section>
