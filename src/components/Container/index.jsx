@@ -31,7 +31,7 @@ function ContainerTask(prop) {
             </div>
             <div className="ContainerTask">
                 {
-                   newTask ? <div className='task'><TextArea></TextArea></div> : <></>
+                   newTask ? <div className='task'><TextArea cancel={uploadNewTask}></TextArea></div> : <></>
                 }
                 {
                     prop.prop.task.length != 0 ? prop.prop.task.map((e,i)=> <Card key={i} info={e}></Card>   ) : <></>
