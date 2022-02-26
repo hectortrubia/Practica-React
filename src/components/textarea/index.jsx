@@ -10,13 +10,14 @@ function TextArea(prop) {
 
   console.log(dataState)
   
-  
+  let [clas, upldateClas] = useState('to_do')
 
   const handlerAddTask = e => {
     e.preventDefault()
    
     
     let date = new Date();
+    
     
     
 
@@ -30,7 +31,8 @@ function TextArea(prop) {
       const newTask = {
         title: e.target.text.value,
         fecha: 'Created  on ' + date.toLocaleDateString(),
-        status: 'to_do'
+        status: clas,
+        changestatus: upldateClas
       }
 
       dataState.push(newTask);

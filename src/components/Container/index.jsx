@@ -14,7 +14,7 @@ import { useContext } from 'react';
 function ContainerTask(prop) {
     console.log(prop.prop.id)
 
-    const [dataState, uploadDataState] = useContext(DataContext);
+    const [dataState] = useContext(DataContext);
     
     const [newTask, uploadNewTask] = useState(false);
 
