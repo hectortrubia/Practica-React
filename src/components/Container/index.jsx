@@ -44,11 +44,15 @@ function ContainerTask(prop) {
                    newTask ? <div className='task'><TextArea cancel={uploadNewTask} prop={prop.prop.id}></TextArea></div> : <></>
                 }
                 {
-                 prop?.prop.task.length != 0 ?  prop?.prop.task.map((e,i)=> <Card key={i} info={e}></Card>   ) : <></>
-                    
-                    // MAP para las task que se creen, el length de este array sera el mismo que el prop.prop.task.length
+                    prop?.prop.id === 1 ? dataState?.filter(e=> e.status === 'to_do').map((e,i) => <Card key={i} info={e}></Card> ): <></>
                 }
-     
+                {
+                    prop?.prop.id === 2 ? dataState?.filter(e=> e.status === "in_progress").map((e,i) => <Card key={i} info={e}></Card> ): <></>
+                }
+                {
+                    prop?.prop.id === 3 ? dataState?.filter(e=> e.status === "done").map((e,i) => <Card key={i} info={e}></Card> ): <></>
+                }
+             
 
             </div>
         </section>

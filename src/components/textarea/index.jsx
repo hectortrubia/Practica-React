@@ -2,20 +2,14 @@
 import './style.css';
 import { useContext, useState } from 'react';
 import { DataContext } from '../context/dataContext';
-import { Data1Context } from '../context/data1Contex';
-import { Data2Context } from '../context/data2Context';
-
 
 
 function TextArea(prop) {
 
   const [dataState, uploadDataState] = useContext(DataContext);
-  const [data1State, uploadData1State] = useContext(Data1Context)
-  const [data2State, uploadData2State] = useContext(Data2Context)
 
   console.log(dataState)
   
-  console.log(data1State)
   
 
   const handlerAddTask = e => {
@@ -48,8 +42,8 @@ function TextArea(prop) {
         fecha: 'Created  on ' + date.toLocaleDateString(),
         status: 'in_progress'
       }
-      data1State.push(newTask1);
-      uploadData1State(data1State);
+      dataState.push(newTask1);
+      uploadDataState(dataState);
       prop.cancel(false)
     } else if(prop.prop === 3){
       const newTask2 = {
@@ -57,8 +51,8 @@ function TextArea(prop) {
         fecha: 'Created  on ' + date.toLocaleDateString(),
         status: 'done'
       }
-      data2State.push(newTask2);
-      uploadData2State(data2State);
+      dataState.push(newTask2);
+      uploadDataState(dataState);
       prop.cancel(false)
     }
   

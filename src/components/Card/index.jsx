@@ -19,10 +19,10 @@ function Card(props){
         <react.Fragment>
        
             <div className='container-note'>
-          <h1 className='title-note'> {props.info.title}</h1>
-          <button className={props.info.status} onClick={changeStatus}></button>
+          <h1 className='title-note'> {props?.info.title}</h1>
+          <button className={props?.info.status} onClick={changeStatus}></button>
          <p  className='delete-note' onClick={handlerdelete} >🗑️ </p>
-           <p className='subtitle-note'>#Created on {props.info.fecha}</p>
+           <p className='subtitle-note'>#Created on {props?.info.fecha}</p>
            </div>
         
         </react.Fragment>
