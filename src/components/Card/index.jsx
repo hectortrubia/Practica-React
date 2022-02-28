@@ -8,10 +8,12 @@ function Card(props){
   const [dataState, uploadDataState] = useContext(DataContext);
 
  const handlerdelete = e =>{
-      // e.props.splice()
+     
       console.log(props.info.num)
-      
-      
+      let index = dataState.findIndex(element => element.num === props.info.num)
+      console.log(index);
+      dataState.splice(index, 1);
+      uploadDataState([...dataState]) 
   }
 
   const changeStatus = e => {
@@ -42,7 +44,7 @@ function Card(props){
             <div className='container-note'>
           <h1 className='title-note'> {props?.info.title}</h1>
           <button className={props?.info.status} onClick={changeStatus}></button>
-         <p  className='delete-note' onClick={handlerdelete} >🗑️ </p>
+         <button  className='delete-note' onClick={handlerdelete} >🗑️ </button>
            <p className='subtitle-note'>#Created on {props?.info.fecha}</p>
            </div>
         

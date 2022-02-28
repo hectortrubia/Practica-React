@@ -2,7 +2,7 @@
 import './style.css';
 import { useContext, useState } from 'react';
 import { DataContext } from '../context/dataContext';
-import { upload } from '@testing-library/user-event/dist/upload';
+
 
 
 function TextArea(prop) {
@@ -69,7 +69,7 @@ function TextArea(prop) {
   return (
     <form onSubmit={handlerAddTask}className="ContTextarea">
 
-      <input name="text" className='textareainput' rows="10" cols="50"></input>
+      <input name="text" className='textareainput' rows="10" cols="50" required></input>
 
       <div className="buttoncontainer">
         <button className='buttonadd'type="submit" >Add</button>

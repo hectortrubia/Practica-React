@@ -34,6 +34,8 @@ function HomePage(){
    
 
     return (
+        <React.Fragment>
+        <input type='text' ></input>
         <div className="allContainer">
             {
                 arrayTask?.map((e,i) => {
@@ -42,7 +44,7 @@ function HomePage(){
                 })
             }
         </div>
-        
+        </React.Fragment>
     )
 }
 
