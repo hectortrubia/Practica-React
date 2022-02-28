@@ -1,8 +1,6 @@
 
-import { useState } from 'react';
+
 import React from 'react';
-
-
 
 import './style.css';
 import { useContext, useState } from 'react';
@@ -74,11 +72,8 @@ function TextArea(prop) {
     return (
 
       <React.Fragment>
-        <div className="ContTextarea">
+       
 
-          <textarea name="textValue" className='textareainput' rows="10" cols="50"></textarea>
-
-  return (
     <form onSubmit={handlerAddTask}className="ContTextarea">
 
       <input name="text" className='textareainput' rows="10" cols="50" required></input>
@@ -89,16 +84,12 @@ function TextArea(prop) {
 
       </div>
     </form>
-  );
-}
 
 
-          <div className="buttoncontainer">
-            <button className='buttonadd'>Add</button>
-            <button className='buttoncancel' >Cancel</button>
 
-          </div>
-        </div >
+
+    
+       
         </React.Fragment>
         )
         }
