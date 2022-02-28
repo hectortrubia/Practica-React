@@ -4,26 +4,28 @@ import './style.css'
 
 function Card(props){
  const handlerdelete = e =>{
-       e.props.splice()
+      // e.props.splice()
+      console.log(e.target)
 
   }
 
+  const changeStatus = e => {
+    e.preventDefault()
+    console.log(e.target)
+  
+  }
 
 
     return(
         <react.Fragment>
+       
             <div className='container-note'>
-          <h1 className='title-note'> titulo tarea{props.title}</h1>
-          <div className='circle-note'></div>
+          <h1 className='title-note'> {props?.info.title}</h1>
+          <button className={props?.info.status} onClick={changeStatus}></button>
          <p  className='delete-note' onClick={handlerdelete} >🗑️ </p>
-           <p className='subtitle-note'>#created on{props.date}</p>
+           <p className='subtitle-note'>#Created on {props?.info.fecha}</p>
            </div>
-
         
-
-
-
-
         </react.Fragment>
 
 
