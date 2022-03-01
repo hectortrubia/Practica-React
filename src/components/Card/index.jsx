@@ -42,8 +42,8 @@ function Card(props){
         <react.Fragment>
        
             <div className='container-note'>
-          <h3 className='title-note'> {props?.info.title}</h3>
-          <button className={props?.info.status} onClick={changeStatus}></button>
+          <h4 className='title-note'> {props?.info.title}</h4>
+          <button className={props?.info.status} onClick={changeStatus}><div className='circleStatus_white'></div></button>
          <button  className='delete-note' onClick={handlerdelete} >🗑️ </button>
            <p className='subtitle-note'>#{props?.info.fecha}</p>
            </div>

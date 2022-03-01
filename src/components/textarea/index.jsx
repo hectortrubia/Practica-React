@@ -76,7 +76,7 @@ function TextArea(prop) {
 
     <form onSubmit={handlerAddTask}className="ContTextarea">
 
-      <input name="text" className='textareainput' rows="10" cols="50" required></input>
+      <input name="text" className='textareainput' rows="10" cols="10" required></input>
 
       <div className="buttoncontainer">
         <button className='buttonadd'type="submit" >Add</button>
