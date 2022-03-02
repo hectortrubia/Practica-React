@@ -10,10 +10,11 @@ import { DataContext } from '../context/dataContext';
 
 function TextArea(prop) {
 
-  const [dataState, uploadDataState] = useContext(DataContext);
+  const [dataState, uploadDataState, dataId, uploadDataID] = useContext(DataContext);
 
   console.log(dataState)
- 
+  
+  console.log(dataId)
 
   const handlerAddTask = e => {
     e.preventDefault()
@@ -23,11 +24,14 @@ function TextArea(prop) {
   
 
     if(prop.prop === 1){
+      let num = parseInt(dataId)+1
+      uploadDataID(num)
 
       const newTask = {
         title: e.target.text.value,
-        fecha: 'Created  on ' + date.toLocaleDateString(),
+        fecha: dataId + ' Created  on ' + date.toLocaleDateString(),
         status: 'to_do',
+        id: dataId,
         num: dataState.length +1
       }
 
@@ -36,10 +40,14 @@ function TextArea(prop) {
       prop.cancel(false)
 
     } else if(prop.prop === 2){
+
+      uploadDataID(dataId+1)
+
       const newTask1 = {
         title: e.target.text.value,
-        fecha: 'Created  on ' + date.toLocaleDateString(),
+        fecha: dataId + ' Created  on ' + date.toLocaleDateString(),
         status: 'in_progress',
+        id: dataId,
         num: dataState.length +1
       }
       dataState.push(newTask1);
@@ -48,10 +56,14 @@ function TextArea(prop) {
 
 
     } else if(prop.prop === 3){
+
+      uploadDataID(dataId+1)
+
       const newTask2 = {
         title: e.target.text.value,
-        fecha: 'Created  on ' + date.toLocaleDateString(),
+        fecha: dataId + ' Created  on ' + date.toLocaleDateString(),
         status: 'done',
+        id: dataId,
         num: dataState.length +1
       }
       dataState.push(newTask2);

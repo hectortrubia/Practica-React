@@ -20,6 +20,7 @@
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
+    justify-content: space-between;
 }
 
 .numberContTask{
@@ -43,8 +44,13 @@
     background-color: transparent;
     border: transparent;
     font-size: 30px;
-    margin-left: 170px;
     
+    
+}
+.deleteAll{
+    background-color: transparent;
+    border: transparent;
+   
 }
 
 /* .task{

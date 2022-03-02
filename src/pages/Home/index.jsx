@@ -8,7 +8,7 @@ import Nav from "../../components/nav";
 
 function HomePage(){
 
-    const [dataState] = useContext(DataContext)
+    const [dataState, uploadDataState, dataId, uploadDataID] = useContext(DataContext)
     
     const [arrayFiltred, uploadFiltred] = useState(dataState)
     
@@ -45,12 +45,20 @@ function HomePage(){
      ]
 
     
-   
+     let date = new Date();
 
     return (
         <React.Fragment>
             <Nav></Nav>
-        <input type='text' className="input_filter" onChange={handleFilter} placeholder="Filter cards"></input>
+            <div className="positionInput">
+            <div className="positionVersion">
+            <div className="positionVersionInside"><p>Version 1.0</p>
+            <p>Updated on: { 
+                dataId > 0 ? dataState?.filter(e => e.id === dataId).map(e => e.fecha) : date.toLocaleDateString()
+            }</p></div>
+        <input type='text' className="input_filter" onChange={handleFilter} placeholder="&#128270;   Filter cards"></input>
+        </div>
+        </div>
         <div className="allContainer">
             {
                 arrayTask?.map((e,i) => {

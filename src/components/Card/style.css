@@ -6,16 +6,28 @@
 
 }
 
+.firstPart_orientation{
+display: flex;
+flex-direction: row;
 
+}
+.secondPart_orientation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
 .container-note{
     border:2px solid rgba(27,31,35,0.15);
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;  
     flex-direction: column;
     margin: 20px;
     border-radius: 5px;
+    padding: 10px 10px 5px 10px;
     width: 340px;    
-    height: 90px;
+    height: auto;
    background-color:#ffffff;
    -webkit-box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
 -moz-box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
@@ -25,17 +37,17 @@ box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
 .title-note{
     color:
     #0366d6;
-    padding-left: 30px;
-
-
-
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 .subtitle-note{
 
 color:
 #70777e;
-padding-left: 30px;
+
 
 }
 .circleStatus_white{
@@ -51,9 +63,8 @@ padding-left: 30px;
     background-color: rgb(2, 131, 2);
     width: 15px;
     height: 15px;
-    position: relative;
-    bottom: 25%;
-    margin-left: 10px;
+    
+  
  
     display: flex;
     justify-content: center;
@@ -66,9 +77,8 @@ padding-left: 30px;
     background-color: rgb(226, 166, 1);
     width: 15px;
     height: 15px;
-    position: relative;
-    bottom: 20px;
-    left: 10px;
+
+  
 
 
     display: flex;
@@ -82,9 +92,7 @@ padding-left: 30px;
 
     width: 15px;
     height: 15px;
-    position: relative;
-    bottom: 20px;
-    left: 3%;
+  
 
 
     display: flex;
@@ -93,15 +101,13 @@ padding-left: 30px;
 }
 
 .delete-note{
-    position: relative;
-    left:90%;
-    bottom: 40%;
+    
     width: 25px;
     height: 25px;
     border: none;
     background-color: #ffffff;
   
-    
+    padding-bottom: 10px;
 
 
 

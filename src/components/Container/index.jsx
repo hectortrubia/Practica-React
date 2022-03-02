@@ -14,7 +14,7 @@ import { useContext } from 'react';
 function ContainerTask(prop) {
     
 
-    const [dataState] = useContext(DataContext);
+    const [dataState, uploadDataState] = useContext(DataContext);
     
 
 
@@ -28,8 +28,16 @@ function ContainerTask(prop) {
         }
     }
 
+    const handleDeleteAll = e => {
+       
+        let cleanArray = dataState.filter(element => element.status != 'done')
+        
+        console.log(cleanArray)
+        uploadDataState(cleanArray)
+        
+    }
 
-
+console.log(prop.prop)
 
     return (
 
@@ -39,7 +47,9 @@ function ContainerTask(prop) {
                     <p>{prop?.prop.task.length}</p>
                  </div>
                 <p className='titleContTask'>{prop?.prop.name}</p>
-                <button className='plusContTask' onClick={handleNewTask}>+</button>
+                {prop?.prop.id === 3 ? <button className='deleteAll' onClick={handleDeleteAll}> &#128465; </button> : <></>}
+                <div>
+                <button className='plusContTask' onClick={handleNewTask}>+</button></div>
             </div>
             <div className="ContainerTask">
                 {
