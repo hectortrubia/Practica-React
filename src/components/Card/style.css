@@ -8,7 +8,7 @@
 
 
 .container-note{
-    border:2px solid #e4e6ea;
+    border:2px solid rgba(27,31,35,0.15);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -24,7 +24,7 @@ box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
 }
 .title-note{
     color:
-    #96ade1;
+    #0366d6;
     padding-left: 30px;
 
 
@@ -35,7 +35,7 @@ box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
 
 color:
 #70777e;
-padding-left: 10px;
+padding-left: 30px;
 
 }
 .circleStatus_white{

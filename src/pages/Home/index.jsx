@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import ContainerTask from "../../components/Container"
 import '../Home/style.css';
 import { DataContext } from "../../components/context/dataContext";
+import Nav from "../../components/nav";
 
 
 
@@ -48,7 +49,8 @@ function HomePage(){
 
     return (
         <React.Fragment>
-        <input type='text' onChange={handleFilter}></input>
+            <Nav></Nav>
+        <input type='text' className="input_filter" onChange={handleFilter} placeholder="Filter cards"></input>
         <div className="allContainer">
             {
                 arrayTask?.map((e,i) => {

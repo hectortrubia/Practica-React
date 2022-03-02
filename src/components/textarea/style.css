@@ -10,9 +10,8 @@
     flex-direction: column;
     width: 380px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
     align-items: center;
-    align-self: center;
 
     
 }
@@ -39,17 +38,19 @@
         color: white;
         margin: 3px;
         opacity: 0.8;
+        border-color: rgba(27,31,35,0.15);
     }
 
     .buttoncancel {
        
         width: 160px;
         height: 36px;
-        background-color: lightgray;
+        background-color: #fafbfc;
         margin:0px;
         border-radius: 8px;
         margin: 3px;
         opacity: 0.8;
+        border-color: rgba(27,31,35,0.15);
     }
 
 
@@ -57,10 +58,11 @@
     .textareainput {
        
         width: 340px;
-        height: 40px;
+        height: 60px;
         background-color: rgb(255, 255, 255);
         margin:0px;
         border-radius: 5px;
+        padding-left: 8px;
         resize: none;
         border-color: rgb(53, 53, 250);
         margin-bottom: 5px;
