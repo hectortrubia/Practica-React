@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     width: 380px;
-    height: 600px;
+    height: 100vh;
+    margin-bottom: 50px;
     background-color:#f6f8fa;    ;
     margin: 10px;
     overflow-y: scroll;
